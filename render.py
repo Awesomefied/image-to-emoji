@@ -5,9 +5,9 @@ dirname = os.path.dirname(__file__)
 
 newimages = eval(open(os.path.join(dirname, "averages.txt"), "r").read())
 
-imginput = input("Input image or images folder directory: ")
+imginput = input("Input image or images folder directory: ").replace("\\", "/")
 
-imgoutput = input("Output folder directory: ")
+imgoutput = input("Output folder directory: ").replace("\\", "/")
 
 imgamountw = int(input("How many images wide?: "))
 imgamounth = 0
