@@ -3,7 +3,7 @@ import numpy as np
 import os
 dirname = os.path.dirname(__file__)
 
-path = input("Input images folder directory: ")
+path = input("Input images folder directory: ").replace("\\ ", " ").replace("\\", "/").strip()
 if path.startswith("'") or path.startswith('"'):
     path = path[slice(1,-1)]
 images = os.listdir(path)
